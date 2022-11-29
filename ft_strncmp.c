@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction compare les string s1 et s2 sur une longueur n et retourne la valeur (-1) si la
+valeur ascii de s1 et plus petite que valeur ascii de s2* et 1 dans le cas contraire et retourne
+0 si les strings s1 et s2 sont les memes sur la longueur n */
+
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction memmove copie len octets de la zone mémoire src vers la zone mémoire dst
+les deux zones peuvent se chevaucher */
+
 #include "libft.h"
 #include <stdlib.h>
 

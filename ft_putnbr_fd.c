@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* écrit l'entier n sur le descripteur de fichier donné 
+Aucune valeur retournée */
+
 #include "libft.h"
 #include <unistd.h>
 

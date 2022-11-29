@@ -10,14 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* copie la chaine de caractères src dans la chaine de caractères dst 
+retourne la taille de la string src */
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
 
-	if (len == 0)
-		return (ft_strlen(src));
 	i = 0;
 	while (i < (len - 1) && src[i] != '\0')
 	{
@@ -25,7 +26,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 		i++;
 	}
 	dst[i] = '\0';
-	return (ft_strlen(src));
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }
 /*
 #include <stdio.h>

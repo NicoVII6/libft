@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction retourne la première occurence de c dans la string s 
+si la fonction ne trouve pas c dans s, elle retourne NULL */
+
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -21,11 +24,7 @@ char	*ft_strchr(const char *s, int c)
 	else
 		return ((char *) s);
 }
-/* le if sert a faire la distinction entre le cas ou on arrive a la fin
-de la string quand c est != de '\0' (retour NULL) et le cas ou c == '\0'
-(retour a l'emplacement du '\0' ds la string) */
 
-/*
 #include <stdio.h>
 
 int main()

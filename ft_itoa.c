@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* alloue et retourne une chaine de caractères représentant l'entier (positif ou négatif) 
+reçu en paramètre. Si l'allocation échoue, retourne NULL */
+
 #include "libft.h"
 #include <stdlib.h>
 

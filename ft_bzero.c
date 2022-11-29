@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction supprime les données des len octets de mémoire en partant de la localisation pointée par s
+et en écrivant le caractère NULL */
+
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t len)

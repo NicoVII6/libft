@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction alloue et retourne une copie de la chaine de caractères s1 trimmée, 
+c'est à dire sans les caractères de set originalement présents au début et à la fin de s1 */
+
 #include "libft.h"
 #include <stdlib.h>
 
@@ -22,7 +25,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	end;
 	
 	if (!set)
-		return (ft_strdup(s1));
+		return (ft_calloc(1, 1));
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (is_in_set(s1[start], set) == 1)

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* écrit la chaine de caractères s sur le descripteur de fichier donné
+Aucune valeur de retour */
+
 #include "libft.h"
 #include <unistd.h>
 

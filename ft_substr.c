@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction copie la string s à partir de l'index start une nouvelle string sur 
+len caractères et retourne cette new string si la copie a fonctionné et retourne 0
+sinon */
+
 #include "libft.h"
 #include <stdlib.h>
 

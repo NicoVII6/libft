@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction calloc alloue la mémoire requise et retourne un pointeur sur elle. la différence
+entre malloc et calloc est que malloc n'initialise pas la mémoire à 0
+Retour : la fonction retourne un pointeur sur la mémoire allouée, ou NULL si échec */
+
 #include "libft.h"
 #include <stdlib.h>
 

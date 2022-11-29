@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 /* applique la fonction f a chaque caractere de la string passee en argument
-pour creer une nouvelle string resultant des applications successives de f */
+pour creer une nouvelle string resultant des applications successives de f
+Retourne la chaine de caractères résultant des applications successives de f
+ou NULL si l'allocation échoue */
 
 #include "libft.h"
 #include <stdlib.h>

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* écris le caractère c sur le descripteur fd donné */
+
 #include "libft.h"
 #include <unistd.h>
 

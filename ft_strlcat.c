@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* concatene à la fin de la string dst la string src sur size caractères de long */
+
 #include "libft.h"
 
-/* 2e if, on peut copier l'intagralite de la string src ds dst */
-/* sinon copie partielle */
+/* 2e if, on peut copier l'intagralite de la string src ds dst sinon copie partielle */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

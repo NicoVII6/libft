@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Alloue memoire et retourne un tableau de strings obtenu en separant
-la string s, a l'aide de la valeur de c (par ex les whitespace), 
-utilise comme delimiteur, le tableau doit etre termine par \0 */
+/* Alloue memoire et retourne un tableau de strings obtenu en separant la string s,
+a l'aide de la valeur de c (par ex les whitespace), utilisée comme delimiteur,
+le tableau doit etre terminé par \0 */
 
 #include "libft.h"
 #include <stdlib.h>
@@ -23,18 +23,20 @@ a '{}' pair to the execution period of the whole program */
 static int	count_words(const char *s, char c)
 {
 	int	words;
+	int	i;
 
 	words = 0;
-	while (*s)
+	i = 0;
+	while (s[i])
 	{
-		if (*s != c)
+		if (s[i] != c)
 		{
 			words++;
-			while (*s != c)
-				s++;
+			while (s[i] != c && s[i])
+				i++;
 		}
 		else
-			s++;
+			i++;
 	}
 	return (words);
 }
@@ -47,36 +49,25 @@ static char	**free_all(char **arr)
 	return(NULL);
 }
 
-static char	**word_size(const char *s, char c, int words_nb)
-{
-	int	size;
-	int	j;
-	char	**arr;
-	int	str_len;
+/* retourne la valeur du pointeur de str_len à chaque fin de mot trouvé dans la chaine de caractères
+dans la fonction split */
 
-	arr = malloc(sizeof(char *) * (words_nb + 1));
-	j = - 1;
-	size = 0;
-	while (*s)
+static void	get_row(char **str, int *str_len, char c)
+{
+	int	i;
+
+	*str += *str_len;
+	*str_len = 0;
+	i = 0;
+	while (**str && **str == c)
+		(*str)++;
+	while ((*str)[i])
 	{
-		if (*s != c)
-		{
-			j++;
-			s++;
-			size++;
-			while (*s != c && *s)
-			{
-				size++;
-				s++;
-			}
-			arr[j] = malloc(sizeof(char) * (size + 1));
-			ft_strlen(*arr) += size;
-			size = 0;
-		}
-		else
-			s++;
+		if ((*str)[i] == c)
+			return;
+		(*str_len)++;
+		i++;
 	}
-	return (arr);
 }
 
 char	**ft_split(const char *s, char c)
@@ -88,8 +79,7 @@ char	**ft_split(const char *s, char c)
 	int		str_len;
 
 	words_nb = count_words(s, c);
-	/*arr = malloc(sizeof(char *) * (words_nb + 1));*/
-	arr = word_size(s, c, words_nb);
+	arr = malloc(sizeof(char *) * (words_nb + 1));
 	if (!arr)
 		return (NULL);
 	str = (char *)s;
@@ -97,11 +87,14 @@ char	**ft_split(const char *s, char c)
 	str_len = 0;
 	while (i < words_nb)
 	{
-		/*arr[i] = malloc(sizeof(char) * ();*/
+		get_row(&str, &str_len, c);
+		arr[i] = malloc(sizeof(char) * (str_len + 1));
 		if (arr[i] == NULL)
 			return (free_all(arr));
-		ft_strlcpy(arr[i], str, str_len);
+		ft_strlcpy(arr[i], str, str_len + 1);
 		i++;
 	}
+	arr[i] = NULL;
 	return (arr);
 }
+/* arr[i] = NULL libère le tableau qui contient l'adresse du début de chaque mot */

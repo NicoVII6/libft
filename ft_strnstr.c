@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction regarde dans la string big si elle contient la string little sur len caractères 
+Retourne un pointeur sur big si little est nulle, un pointeur sur big au moment ou le
+début de la string little est reconnue sur len char ou retourne la valeur nulle si little ne
+se trouve pas sur big */
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -20,16 +25,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (little[0] == '\0')
 		return ((char *)big);
-	while ((char)big[i])
+	while (big[i])
 	{
 		j = 0;
-		if ((char)big[i] == (char)little[j])
+		if (big[i] == little[j])
 		{
-			while ((char)big[i + j] == (char)little[j] && (i + j) < len)
+			while (big[i + j] == little[j] && (i + j) < len)
 			{
 				j++;
-				if ((char)little[j] == '\0')
-					return ((char *)&big[i]);
+				if (little[j] == '\0')
+					return ((char *)big + i);
 			}
 		}
 		i++;

@@ -10,28 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-/*
-void	*ft_memchr(const void *s, int c, size_t len)
-{
-	void	*ptr;
-	void	*str;
-	size_t	i;
+/* la fonction examine les n premiers octets de la zone mémoire pointée par s, 
+à la recherche de la première occurence de c 
+c et la zone mémoire pointée par s sont interprétées comme des unsigned char */
 
-	ptr = NULL;
-	str = (unsigned char	*)s;
-	i = 0;
-	while (i < len && (*((unsigned char *)((unsigned char * )str + i)) != '\0'))
-	{
-		if(*(unsigned char *)((unsigned char *)str + i) == c)
-		{
-			ptr = ((unsigned char *) str + i);
-			break;	
-		}
-		i++;
-	}
-	return (ptr);
-}*/
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t len)
 {

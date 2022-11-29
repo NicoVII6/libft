@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ecrit la string s sur le descripteur fd donné et suivi d'un retour à la ligne */
+
 #include "libft.h"
 #include <unistd.h>
 

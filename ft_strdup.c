@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction duplique la string src vers une string dst nouvellement créée et retourne
+un pointeur sur la string dst si la duplication réussie, sinon elle retourne la valeur NULL */
+
 #include "libft.h"
 #include <stdlib.h>
 

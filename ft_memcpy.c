@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction copie len octets de la zone mémoire src vers la zone mémoire dst
+si les zones mémoires se chevauchent, préférer la fonction memmove */
+
 #include "libft.h"
 
 void	*ft_memcpy(void	*dst, const void *src, size_t len)

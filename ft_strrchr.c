@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* la fonction parcourt la string s à la recherche de la dernière occurence de c qu'elle contient 
+Retourne la valeur nulle si c n'apparait pas dans s
+Retourne le pointeur de la dernière occurence de c dans s sinon */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -23,9 +27,10 @@ char	*ft_strrchr(const char *s, int c)
 			last_o = (char *) s;
 		s++;
 	}
-	if (*s == (char) c)
-		last_o = ((char *) s);
-	return (last_o);
+	if (last_o != 0)
+		return (last_o);
+	else
+		return (NULL);
 }
 /*
 #include <stdio.h>
