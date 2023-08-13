@@ -12,7 +12,8 @@
 
 /* la fonction copie la string s à partir de l'index start une nouvelle string sur 
 len caractères et retourne cette new string si la copie a fonctionné et retourne 0
-sinon */
+sinon. Si la 1ere condition de la fonction est satisfaite, celle ci renvoie un
+un pointeur sur une string vide */
 
 #include "libft.h"
 #include <stdlib.h>
