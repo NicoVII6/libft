@@ -12,7 +12,10 @@
 
 /* la fonction compare les string s1 et s2 sur une longueur n et retourne la valeur (-1) si la
 valeur ascii de s1 et plus petite que valeur ascii de s2* et 1 dans le cas contraire et retourne
-0 si les strings s1 et s2 sont les memes sur la longueur n */
+0 si les strings s1 et s2 sont les memes sur la longueur n.
+pour qu'il n'y ait pas d'erreur lors de la comparaison des strings, on les cast en unsigned
+char et ainsi on evite les erreurs si au depart les strings ne sont pas du meme type (une
+signee (range du caractere entre -128 et 127) et l'autre non (range du caractere entre 0 et 255)*/
 
 #include "libft.h"
 
